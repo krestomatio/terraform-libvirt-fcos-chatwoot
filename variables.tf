@@ -36,14 +36,14 @@ variable "chatwoot_image" {
 variable "postgres_image" {
   type = object(
     {
-      name    = optional(string, "docker.io/postgres")
-      version = optional(string, "16")
+      name    = optional(string, "docker.io/pgvector/pgvector")
+      version = optional(string, "pg16")
     }
   )
   description = "Postgres container image"
   default = {
-    name    = "docker.io/postgres"
-    version = "16"
+    name    = "docker.io/pgvector/pgvector"
+    version = "pg16"
   }
   nullable = false
 }
